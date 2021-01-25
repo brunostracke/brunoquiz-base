@@ -4,6 +4,7 @@ import Widget from '../src/components/Widget'
 import QuizBackground from '../src/components/QuizBackground'
 import GitHubCorner from '../src/components/GitHubCorner'
 import Footer from '../src/components/Footer'
+import Head from 'next/head'
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -26,6 +27,11 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
+    <div>
+    <Head>
+      <title>Quizney</title>
+      <link rel="icon" href={db.icon}></link>
+    </Head>
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <Widget>
@@ -57,5 +63,6 @@ export default function Home() {
       </QuizContainer>
         <GitHubCorner projectUrl="https://github.com/brunostracke"/>
     </QuizBackground>
+    </div>
   )
 }
