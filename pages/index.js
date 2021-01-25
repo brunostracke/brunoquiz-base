@@ -54,8 +54,8 @@ export default function Home() {
           </Widget.Content>
         </Widget>
         <Footer />
-        <GitHubCorner projectUrl="https://github.com/brunostracke"/>
       </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/brunostracke"/>
     </QuizBackground>
   )
 }
