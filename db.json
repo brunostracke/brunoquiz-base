@@ -1,29 +1,116 @@
 { 
     "bg": "https://www.rollingstone.com/wp-content/uploads/2011/03/britneyspears.jpg",
     "icon": "https://64.media.tumblr.com/c55c65ab7fc551531600a111dbf85df0/fd0d27b1a03e3683-17/s128x128u_c1/4d97c5f70781e439ea239c57b351b2ddd9175cc0.jpg",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "title": "Quizney",
+    "description": "O quanto você sabe sobre a eterna princesa do POP?",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://blog.jovempan.com.br/paulacarvalho/wp-content/uploads/sites/14/2016/12/111ddf27f5ab450f501155c0793b3b34.gif",
+        "title": "Qual o nome do meio de Britney Spears?",
+        "description": "Essa é fácil hein",
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Jean",
+          "Lindsay",
+          "Billie Jean",
+          "Robson"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://lh3.googleusercontent.com/proxy/gN_yMXbTbYD3wDwuO6QIC_HoqNVCfqek2qlfH67XL2NWt1LcgxZawfdmBcjvuhuzTAZqQu4ByUssOK9rknR2YAxAVMv7yJFcj5GDWkZ8Lc_nBfYa39Z4PWon4sWr4iLn5vY-z5yTLUnL3lvPpHVemMRgX7v_2ACwyJo3_gxMyujRWy7a1Oo",
+        "title": "Britney já foi uma Teen da",
+        "description": "This is 90s",
+        "answer": 2,
+        "alternatives": [
+           "Nicklondeon",
+           "American Idol Kids",
+           "Disney"
+        ]
+      },
+      {
+        "image": "https://pa1.narvii.com/6405/81f642f3022fe4b50cce762d58c813e238395dd2_hq.gif",
+        "title": "Quem eram as duas companheiras de balada da Brit?",
+        "description": "Party like's 2007",
+        "answer": 2,
+        "alternatives": [
+           "Amanda Bynes e Paris Hilton",
+           "Paris Hilton e Kim Kardashian",
+           "Paris Hilton e Lindsay Lohan",
+           "Selena Gomez e Taylor Swift",
+           "Madonna e Rihanna"
+        ]
+      },
+      {
+        "image": "https://i1.wp.com/s1.thingpic.com/images/Jk/oaeP5FCeoTgYo43VGNVjW8y1.gif?w=850",
+        "title": "Qual o nome dos dois filhos da Britney?",
+        "description": "Os herdeiros do trono",
+        "answer": 3,
+        "alternatives": [
+           "Jamie e Jacob",
+           "Kingston e Apollo",
+           "Kevin e Justin",
+           "Sean e Jayden"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/MRENHyF613UQg/giphy.gif",
+        "title": "Quem escreveu o roteiro do icônico filme 'Crossroads'?",
+        "description": "Um dos maiores clássicos do cinema",
+        "answer": 1,
+        "alternatives": [
+           "Britney Spears",
+           "Shonda Rimes",
+           "Steven Spielberg",
+           "J. J. Abrams",
+           "Pedro Almodovar"
+        ]
+      },
+      {
+        "image": "https://s2.glbimg.com/SPOMOIh5kRTKcyqzG1Mc6Etza9A=/e.glbimg.com/og/ed/f/original/2014/12/03/britney3.gif",
+        "title": "Quantos anos tinha nossa rainha quando ela lançou '...Baby One More Time'?",
+        "description": "Oh baby, baby, how was I supposed to know...?",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "16",
+           "17",
+           "18",
+           "19"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/7zrZAg61HEsYDmOvto/giphy.gif",
+        "title": "Para qual artista/banda '...Baby One More Time' foi originalmente escrita?",
+        "description": "Tem gente que não sabe aproveitar as oportunidades que a vida dá",
+        "answer": 0,
+        "alternatives": [
+           "TLC",
+           "Spice Girls",
+           "Destiny's Child",
+           "Madonna"
+        ]
+      },
+      {
+        "image": "https://media3.giphy.com/media/vLP3gfDKhJPkQ/200.gif",
+        "title": "Que cidade do Estado da Louisiana (nos EUA) teve a sorte de ver Britney crescer?",
+        "description": "Podia ser a minha... :(",
+        "answer": 3,
+        "alternatives": [
+           "New Orleans",
+           "Mars",
+           "Lafayette",
+           "Kentwood"
+        ]
+      },
+      {
+        "image": "https://i.pinimg.com/originals/68/80/d3/6880d3e7f360e565e7929797f4ffef9a.gif",
+        "title": "Em que dia Deus mandou para o mundo esta benção chamada Britney Spears?",
+        "description": "Chocantemente, não foi no dia 25 de dezembro",
+        "answer": 2,
+        "alternatives": [
+           "03 de dezembro",
+           "15 de dezembro",
+           "02 de dezembro",
+           "21 de dezembro"
         ]
       }
     ],
@@ -40,5 +127,8 @@
         "success": "#4CAF50"
       },
       "borderRadius": "4px"
-    }
+    },
+    "happy": "https://www.emaisgoias.com.br/wp-content/uploads/2017/03/tumblr_mo8njlaoCx1r3ty02o1_500.gif",
+    "sad": "https://64.media.tumblr.com/tumblr_m6e4obyIw81ryfwpio1_500.gif"
+    
   }

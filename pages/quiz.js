@@ -10,6 +10,10 @@ import Button from '../src/components/Button';
 import AlternativesForm from '../src/components/AlternativesForm';
 
 function ResultWidget({ results }) {
+  const acertos = results.filter((x) => x).length;
+  let score = acertos / results.length;
+  score *= 100;
+  score.toFixed(0);
   return (
     <Widget>
       <Widget.Header>
@@ -17,6 +21,18 @@ function ResultWidget({ results }) {
       </Widget.Header>
 
       <Widget.Content>
+        <img
+          alt="Descrição"
+          style={{
+            width: '100%',
+            height: '150px',
+            objectFit: 'cover',
+          }}
+          src={score > 70 ? db.happy : db.sad}
+        />
+        <h2>
+          {score > 70 ? 'PARABÉNS!! :D' : 'POXANEY :(' }
+        </h2>
         <h3>
           Voce acertou
           {' '}
@@ -33,7 +49,8 @@ function ResultWidget({ results }) {
         </h3>
         <ul>
           {results.map((result, index) => (
-            <li key={`result__${result}`}>
+            // eslint-disable-next-line react/no-array-index-key
+            <li key={`result__${index}`}>
               #
               {index < 9 ? '0' : ''}
               {index + 1}
@@ -110,7 +127,7 @@ function QuestionWidget({
               onSubmit();
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
-            }, 2 * 1000);
+            }, 1 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
