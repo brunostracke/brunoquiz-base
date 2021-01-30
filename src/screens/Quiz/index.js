@@ -1,13 +1,14 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/Logo';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import Button from '../src/components/Button';
-import AlternativesForm from '../src/components/AlternativesForm';
+// import db from '../../../../db.json';
+import Widget from '../../components/Widget';
+import QuizLogo from '../../components/Logo';
+import QuizBackground from '../../components/QuizBackground';
+import QuizContainer from '../../components/QuizContainer';
+import Button from '../../components/Button';
+import AlternativesForm from '../../components/AlternativesForm';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 function ResultWidget({ results }) {
   const acertos = results.filter((x) => x).length;
@@ -17,22 +18,10 @@ function ResultWidget({ results }) {
   return (
     <Widget>
       <Widget.Header>
-        RESULTADONEY
+        RESULTADO
       </Widget.Header>
 
       <Widget.Content>
-        <img
-          alt="Descrição"
-          style={{
-            width: '100%',
-            height: '150px',
-            objectFit: 'cover',
-          }}
-          src={score > 70 ? db.happy : db.sad}
-        />
-        <h2>
-          {score > 70 ? 'PARABÉNS!! :D' : 'POXANEY :(' }
-        </h2>
         <h3>
           Voce acertou
           {' '}
@@ -95,7 +84,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" /> */}
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -148,6 +137,7 @@ function QuestionWidget({
                   name={questionId}
                   type="radio"
                   onChange={() => setSelectedAlternative(alternativeIndex)}
+                  checked={selectedAlternative === alternativeIndex}
                 />
                 {alternative}
               </Widget.Topic>
@@ -173,13 +163,14 @@ const screenStates = {
   LOADING: 'LOADING',
   RESULT: 'RESULT',
 };
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
-  const totalQuestions = db.questions.length;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
+  const totalQuestions = externalQuestions.length;
+  const bg = externalBg;
 
   function addResult(result) {
     setResults([
@@ -210,7 +201,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={bg}>
       <QuizContainer>
         <QuizLogo />
         {screenState === screenStates.QUIZ && (
